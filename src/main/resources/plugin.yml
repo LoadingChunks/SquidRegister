@@ -1,0 +1,8 @@
+name: SquidRegister
+main: net.loadingchunks.plugins.SquidRegister.SquidRegister.SquidRegister
+version: 0.1
+
+commands:
+   command:
+      description: A Command
+      usage: /<command> 
