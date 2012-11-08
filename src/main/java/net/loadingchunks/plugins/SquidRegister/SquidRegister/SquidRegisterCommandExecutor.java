@@ -67,7 +67,12 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	
         	String response = http.registerUser(username, email, mcusername);
         	
-        	if(response.equals("success"))
+        	if(response.equals("invalid_key"))
+        	{
+        		this.plugin.getLogger().warning("Invalid Endpoint Key!");
+        		return false;
+        	}
+        	else if(response.equals("success"))
         	{
         		sender.sendMessage("Registered successfully.");
         		return true;

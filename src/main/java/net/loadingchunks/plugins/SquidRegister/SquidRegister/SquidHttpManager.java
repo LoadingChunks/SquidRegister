@@ -62,6 +62,9 @@ public class SquidHttpManager {
 		}
 		
 		this.plugin.getLogger().info("Got " + output + " from Endpoint.");
+		
+		if(output.equals("invalid_key"))
+			return output;
 			
 		if(output.equals(""))
 			return "failed_response";
