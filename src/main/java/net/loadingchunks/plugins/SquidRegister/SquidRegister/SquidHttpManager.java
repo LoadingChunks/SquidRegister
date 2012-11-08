@@ -60,10 +60,11 @@ public class SquidHttpManager {
 		{
 			e.printStackTrace();
 		}
+		
+		this.plugin.getLogger().info("Got " + output + " from Endpoint.");
 			
 		if(output.equals(""))
-			return "failed_response";;	
-
+			return "failed_response";
 			
 		if(output == null)
 			return "null";

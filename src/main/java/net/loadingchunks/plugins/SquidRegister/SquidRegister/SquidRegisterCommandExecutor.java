@@ -70,6 +70,7 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	if(response.equals("success"))
         	{
         		sender.sendMessage("Registered successfully.");
+        		return true;
         	} else if(response.equalsIgnoreCase("duplicate_user"))
         	{
         		sender.sendMessage("A user has already registered with the provided username (" + username + "), please choose another.");
