@@ -17,9 +17,6 @@ package net.loadingchunks.plugins.SquidRegister.SquidRegister;
     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -65,22 +62,7 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	mcusername = p.getName();
         	
         	email = args[0];
-        	
-        	Boolean validEmail = true;
-        	
-        	try {
-				InternetAddress inaddr = new InternetAddress(email);
-				inaddr.validate();
-			} catch (AddressException e) {
-				validEmail = false;
-			}
-        	
-        	if(!validEmail)
-        	{
-        		sender.sendMessage("Please ender a valid email address");
-        		return false;
-        	}
-        	
+
         	SquidHttpManager http = new SquidHttpManager(this.plugin);
         	
         	String response = http.registerUser(username, email, mcusername);

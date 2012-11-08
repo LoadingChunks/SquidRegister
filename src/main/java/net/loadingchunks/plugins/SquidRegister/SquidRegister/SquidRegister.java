@@ -17,7 +17,6 @@ package net.loadingchunks.plugins.SquidRegister.SquidRegister;
     along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SquidRegister extends JavaPlugin {
@@ -34,11 +33,11 @@ public class SquidRegister extends JavaPlugin {
 		
 		this.commandExecutor = new SquidRegisterCommandExecutor(this);
 
-		PluginManager pm = this.getServer().getPluginManager();
-
 		getCommand("register").setExecutor(commandExecutor);
 		
 		this.getConfig().addDefault("api.key", "");
 		this.getConfig().addDefault("api.endpoint", "http://loadingchunks.net/endpoint.php?method=register");
+		this.getConfig().options().copyDefaults(true);
+		this.saveConfig();
 	}
 }
