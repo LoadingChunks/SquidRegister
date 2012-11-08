@@ -47,7 +47,7 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	
         	Player p = (Player)sender;
         	
-        	if(args.length > 0)
+        	if(args.length == 0)
         		return false;
         	
         	String username = "";
