@@ -3,6 +3,6 @@ main: net.loadingchunks.plugins.SquidRegister.SquidRegister.SquidRegister
 version: 0.1
 
 commands:
-   command:
-      description: A Command
-      usage: /<command> 
+   register:
+      description: Register on our forum from within game. Unless specified, it will use your Minecraft username.
+      usage: /register <email> [username]

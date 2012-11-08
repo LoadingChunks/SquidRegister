@@ -92,6 +92,18 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	{
         		sender.sendMessage("A user has already registered with the provided username (" + username + "), please choose another.");
         		return false;
+        	} else if(response.equalsIgnoreCase("duplicate_email"))
+        	{
+        		sender.sendMessage("A user has already registered with the provided email address (" + email + "), please choose another");
+        		return false;
+        	} else if(response.equalsIgnoreCase("invalid_user"))
+        	{
+        		sender.sendMessage("The username specified is not valid, please choose another.");
+        		return false;
+        	} else if(response.equalsIgnoreCase("invalid_email"))
+        	{
+        		sender.sendMessage("The email specified is not valid, please choose another.");
+        		return false;
         	}
         }
         return false;
