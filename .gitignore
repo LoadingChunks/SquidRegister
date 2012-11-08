@@ -2,3 +2,6 @@ target
 bin
 *.jar
 *.class
+.project
+.settings
+.classpath
