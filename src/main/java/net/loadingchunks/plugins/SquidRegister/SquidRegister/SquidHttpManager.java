@@ -24,7 +24,7 @@ public class SquidHttpManager {
 		    DataOutputStream printout;
 		    DataInputStream input;
 		    // URL of CGI-Bin script.
-		    url = new URL(this.plugin.getConfig().getString("api.path"));
+		    url = new URL(this.plugin.getConfig().getString("api.endpoint"));
 		    // URL connection channel.
 		    urlConn = url.openConnection();
 		    // Let the run-time system (RTS) know that we want input.
