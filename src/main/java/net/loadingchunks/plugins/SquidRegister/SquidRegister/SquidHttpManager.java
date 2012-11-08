@@ -71,12 +71,15 @@ public class SquidHttpManager {
 			
 		if(output == null)
 			return "null";
-		
+				
 		if(output.equalsIgnoreCase("success"))
 			return "success";
 		
 		if(output.equalsIgnoreCase("duplicate_user"))
 			return "duplicate_user";
+		
+		if(output != null)
+			return output;
 			
 		return "unknown";
 	}

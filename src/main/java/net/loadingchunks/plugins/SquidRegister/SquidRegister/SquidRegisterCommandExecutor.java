@@ -74,7 +74,7 @@ public class SquidRegisterCommandExecutor implements CommandExecutor {
         	}
         	else if(response.equals("success"))
         	{
-        		sender.sendMessage("Registered successfully.");
+        		sender.sendMessage("Registered successfully. You should receive an email soon with your password.");
         		return true;
         	} else if(response.equalsIgnoreCase("duplicate_user"))
         	{
