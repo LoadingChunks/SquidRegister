@@ -1,6 +1,6 @@
 name: SquidRegister
 main: net.loadingchunks.plugins.SquidRegister.SquidRegister.SquidRegister
-version: 0.1
+version: 1.0
 
 commands:
    register:
