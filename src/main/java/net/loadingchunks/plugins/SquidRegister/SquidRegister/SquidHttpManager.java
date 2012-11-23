@@ -68,9 +68,6 @@ public class SquidHttpManager {
 			
 		if(output.equals(""))
 			return "failed_response";
-			
-		if(output == null)
-			return "null";
 				
 		if(output.equalsIgnoreCase("success"))
 			return "success";
